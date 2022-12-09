@@ -7,17 +7,27 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class SnapdragonModule {
+object SnapdragonModule {
 
-    @Binds
-    abstract fun provideProcessor(snapdragon: Snapdragon): Processor
-
-    //Approach 1 to create instance of Snapdragon class with object SnapdragonModule
 //    @Provides
-//    fun provideSnapdragon():Snapdragon {
-//        return Snapdragon()
+//    fun provideSnapdragon(snapdragon: Snapdragon):Processor {
+//        return snapdragon
 //    }
+
+    @Provides
+    fun provideSnapdragon(@Named("type") type:Int, @Named("clockSpeed") clockSpeed:Int):Processor {
+        return Snapdragon(type, clockSpeed)
+    }
+
+    @Provides
+    @Named("type")
+    fun provideType() = 7
+
+    @Provides
+    @Named("clockSpeed")
+    fun provideClockSpeed() = 9
 }
