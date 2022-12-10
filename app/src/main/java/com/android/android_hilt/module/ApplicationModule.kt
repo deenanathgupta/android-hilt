@@ -2,23 +2,19 @@ package com.android.android_hilt.module
 
 import com.android.android_hilt.model.Processor
 import com.android.android_hilt.model.Snapdragon
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object SnapdragonModule {
-
-//    @Provides
-//    fun provideSnapdragon(snapdragon: Snapdragon):Processor {
-//        return snapdragon
-//    }
+object ApplicationModule {
 
     @Provides
+    @Singleton
     fun provideSnapdragon(@Named("type") type:Int, @Named("clockSpeed") clockSpeed:Int):Processor {
         return Snapdragon(type, clockSpeed)
     }

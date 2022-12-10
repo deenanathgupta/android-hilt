@@ -6,11 +6,12 @@ import com.android.android_hilt.model.Lithium
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
+import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.scopes.ActivityScoped
 
 @Module
-@InstallIn(SingletonComponent::class)
-object BatteryModule {
+@InstallIn(ActivityComponent::class)
+object ActivityModule {
 
     @Provides
     fun provideLithium():Lithium {
