@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("DEENA","------Main Activity------")
-        Log.d("DEENA","Processor 1 $processor1")
-        Log.d("DEENA","Processor 2 $processor2")
-        Log.d("DEENA","battery 1 $battery1")
-        Log.d("DEENA","battery 2 $battery2")
+        Log.d("Hilt","------Main Activity------")
+        Log.d("Hilt","Processor 1 $processor1")
+        Log.d("Hilt","Processor 2 $processor2")
+        Log.d("Hilt","battery 1 $battery1")
+        Log.d("Hilt","battery 2 $battery2")
         replaceFragment(R.id.container, MainFragment.newInstance())
     }
 

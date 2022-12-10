@@ -43,13 +43,13 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("DEENA","------Main Fragment------")
-        Log.d("DEENA","Processor 1 $processor1")
-        Log.d("DEENA","Processor 2 $processor2")
-        Log.d("DEENA","battery 1 $battery1")
-        Log.d("DEENA","battery 2 $battery2")
-        Log.d("DEENA","camera 1 $camera2")
-        Log.d("DEENA","camera 2 $camera2")
+        Log.d("Hilt","------Main Fragment------")
+        Log.d("Hilt","Processor 1 $processor1")
+        Log.d("Hilt","Processor 2 $processor2")
+        Log.d("Hilt","battery 1 $battery1")
+        Log.d("Hilt","battery 2 $battery2")
+        Log.d("Hilt","camera 1 $camera2")
+        Log.d("Hilt","camera 2 $camera2")
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
     }

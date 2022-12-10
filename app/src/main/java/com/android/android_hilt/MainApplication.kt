@@ -16,8 +16,8 @@ class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Log.d("DEENA","------Main Application------")
-        Log.d("DEENA","Processor 1 $processor1")
-        Log.d("DEENA","Processor 2 $processor2")
+        Log.d("Hilt","------Main Application------")
+        Log.d("Hilt","Processor 1 $processor1")
+        Log.d("Hilt","Processor 2 $processor2")
     }
 }
